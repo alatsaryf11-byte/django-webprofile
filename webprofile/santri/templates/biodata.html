@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Biodata Santri{% endblock %}
+{% block page_title %}Biodata Santri ✨{% endblock %}
+{% block subtitle %}Kelas X — Asrama Ibnu Katsir{% endblock %}
+
+{% block content %}
+    <section class="card">
+      <h3 class="section-title orange">Biodata Singkat</h3>
+      <div class="minat">
+        <img src="{% static 'images/foto.png'%}" alt="Foto Santri" class="profile-photo">
+        <p>
+          Assalamu’alaikum! Ana adalah santri di HSI Boarding School.<br>
+          Ana suka belajar dan ingin menjadi pribadi yang bermanfaat. & Saat ini Ana sedang belajar HTML dasar untuk membuat website sederhana.<br>
+          🧠“Barangsiapa menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.” — HR. Muslim
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3 class="section-title blue">Hobi</h3>
+      <ul>
+        <li>Ngoding</li>
+        <li>berenang</li>
+        <li>tenis meja</li>
+        <li>badminton</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3 class="section-title orange">Cita-cita</h3>
+      <ol>
+        <li>Progammer</li>
+        <li>CEO Perusahaan Yang Paham <i>Agama</i></li>
+        <li>Developer Aplikasi</li>
+        <li>Hafidz Al-quran</li>
+      </ol>
+    </section>
+
+    <section class="card">
+        <h3 class="section-title blue">Kontak</h3>
+        <p>Whatsapp : <a href="https://wa.me/6285147122580" target="_blank">+62 851-4712-2580</a></p>
+
+        <p>Instagram : <a href="https://www.instagram.com/al_atsary1109/" target="_blank">@al_atsary1109</a> <br>
+        </p>
+
+        <p>Telegram : <a href="https://t.me/@alatsary11" target="_blank">alatsary11</a></p>
+
+        <p>Email : <a href="mailto:farhatpangestu57@gmail.com">alatsaryf11@gmail.com</a></p>
+    </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Beranda - Website Profil{% endblock %}
+{% block page_title %}HSI Boarding School Purworejo{% endblock %}
+{% block subtitle %}Website Profil Sederhana — Kelas X{% endblock %}
+
+{% block content %}
+  <div class="container">
+
+    <section class="card">
+      <h2 class="section-title">Pengantar</h2>
+      <p>
+        Selamat datang di website profil sederhana Ana.<br />
+        Situs ini berisi biodata, hobi, dan cita-cita Ana sebagai siswa HSI
+        Boarding School Purworejo.<br />
+        Silakan jelajahi halaman biodata untuk mengenal Ana lebih dekat.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Avatar Favorits</h2>
+      <div class="minat">
+        <img src="{% static 'images/hacker.png' %}" alt="Minat Saya">
+        <p>
+          Ana tertarik untuk menjadi hacker seperti grup hacker terkenal
+          <strong>Anonymous</strong> tetapi versi <s>haram</s> <u>halal</u>-nya yaitu
+          <em>white-hacker</em> atau <strong>ethical hacker</strong>.<br />
+          Ke depannya Ana akan belajar lebih dalam dan mengambil
+          <u><strong>sertifikasi</strong></u> resmi agar bisa bermanfaat untuk
+          banyak orang dan karir Ana ke depan.
+        </p>
+      </div>
+    </section>
+
+  </div>
+{% endblock %}

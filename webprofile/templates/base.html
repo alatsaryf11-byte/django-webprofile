@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Beranda - Website Profil{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="{% static 'images/logo.webp' %}" alt="Logo Sekolah" class="logo">
+    <h1>{% block page_title %}HSI Boarding School Purworejo{% endblock %}</h1>
+    <p>{% block subtitle %}Website Profil Sederhana — Kelas X{% endblock %}</p>
+  </header>
+
+  <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="nav-links" id="nav-links">
+            <a href="{% url 'home' %}"
+                {% if request.resolver_match.url_name == 'home'%}class="active"{% endif %}>
+                Beranda</a> 
+            <a href="{% url 'biodata' %}"
+                {% if request.resolver_match.url_name == 'biodata'%}class="active"{% endif %}>
+                Biodata</a> 
+            <a href="{% url 'jadwal' %}"
+                {% if request.resolver_match.url_name == 'jadwal'%}class="active"{% endif %}>
+                Jadwal</a> 
+            <a href="{% url 'galeri' %}"
+                {% if request.resolver_match.url_name == 'galeri'%}class="active"{% endif %}>
+                Galeri</a> 
+            <a href="{% url 'feedback' %}"
+                {% if request.resolver_match.url_name == 'feedback'%}class="active"{% endif %}>
+                Feedback</a>
+      </div>
+  </nav>
+
+  <hr>
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+  
+  <footer class="site-footer">
+    &copy; 2025 | HSI Boarding School Purworejo 
+  </footer>
+
+</body>
+</html>
